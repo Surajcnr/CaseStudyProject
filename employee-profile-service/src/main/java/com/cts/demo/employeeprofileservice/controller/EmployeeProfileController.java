@@ -14,27 +14,27 @@ public class EmployeeProfileController {
     @Autowired
     private EmployeeProfileService service;
 
-    @PostMapping
+    @PostMapping("/save")
     public EmployeeProfile create(@RequestBody EmployeeProfile obj) {
         return service.create(obj);
     }
 
-    @GetMapping
+    @GetMapping("/fetchAll")
     public List<EmployeeProfile> getAll() {
         return service.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/fetchById/{id}")
     public EmployeeProfile getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public EmployeeProfile update(@PathVariable Long id, @RequestBody EmployeeProfile obj) {
         return service.update(id, obj);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deleteById/{id}")
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }
