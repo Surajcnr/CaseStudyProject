@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class PerformanceReview {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long reviewId;
 
     private Long employeeId;

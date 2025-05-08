@@ -11,7 +11,7 @@ import lombok.*;
 public class EmployeeProfile {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long employeeId;
 
     private String name;

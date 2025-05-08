@@ -11,7 +11,7 @@ import lombok.*;
 public class Feedback {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long feedbackId;
 
     private Long fromEmployeeId;

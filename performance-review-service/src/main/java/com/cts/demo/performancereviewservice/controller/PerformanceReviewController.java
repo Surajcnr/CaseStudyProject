@@ -8,33 +8,33 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/performancereviews")
+@RequestMapping("/performancereviews")
 public class PerformanceReviewController {
 
     @Autowired
     private PerformanceReviewService service;
 
-    @PostMapping
+    @PostMapping("/save")
     public PerformanceReview create(@RequestBody PerformanceReview obj) {
         return service.create(obj);
     }
 
-    @GetMapping
+    @GetMapping("/fetchAll")
     public List<PerformanceReview> getAll() {
         return service.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/fetchById/{id}")
     public PerformanceReview getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public PerformanceReview update(@PathVariable Long id, @RequestBody PerformanceReview obj) {
         return service.update(id, obj);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deleteById/{id}")
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }

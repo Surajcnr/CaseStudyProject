@@ -8,33 +8,33 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/reports")
+@RequestMapping("/reports")
 public class ReportController {
 
     @Autowired
     private ReportService service;
 
-    @PostMapping
+    @PostMapping("/save")
     public Report create(@RequestBody Report obj) {
         return service.create(obj);
     }
 
-    @GetMapping
+    @GetMapping("/fetchAll")
     public List<Report> getAll() {
         return service.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/fetchById/{id}")
     public Report getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Report update(@PathVariable Long id, @RequestBody Report obj) {
         return service.update(id, obj);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("deleteById/{id}")
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }

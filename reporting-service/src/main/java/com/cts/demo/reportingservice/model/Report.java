@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Report {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long reportId;
 
     private Long employeeId;
