@@ -12,7 +12,7 @@ import java.util.List;
 public class PerformanceReviewController {
 
     @Autowired
-    private PerformanceReviewService service;
+    PerformanceReviewService service;
 
     @PostMapping("/save")
     public PerformanceReview create(@RequestBody PerformanceReview obj) {

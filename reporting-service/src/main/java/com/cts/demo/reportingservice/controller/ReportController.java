@@ -12,7 +12,7 @@ import java.util.List;
 public class ReportController {
 
     @Autowired
-    private ReportService service;
+    ReportService service;
 
     @PostMapping("/save")
     public Report create(@RequestBody Report obj) {

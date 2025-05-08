@@ -12,7 +12,7 @@ import java.util.List;
 public class EmployeeProfileController {
 
     @Autowired
-    private EmployeeProfileService service;
+    EmployeeProfileService service;
 
     @PostMapping("/save")
     public EmployeeProfile create(@RequestBody EmployeeProfile obj) {
