@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cts.demo.reportingservice.dto.PerformanceReviewDTO;
 
-@FeignClient(name = "performance-review-service")
+@FeignClient(name = "performance-review-service",url="http://localhost:8082/performancereviews")
 public interface PerformanceReviewClient {
-    @GetMapping("/api/performancereviews/employee/{employeeId}")
-    List<PerformanceReviewDTO> getReviewsByEmployeeId(@PathVariable("employeeId") Long employeeId);
+    @GetMapping("/fetchById/{employeeId}")
+    List<PerformanceReviewDTO> getReviewsByEmployeeId(@PathVariable("employeeId") Long id);
 }

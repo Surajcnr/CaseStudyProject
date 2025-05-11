@@ -14,9 +14,9 @@ public class ReportController {
     @Autowired
     ReportService service;
 
-    @PostMapping("/save")
-    public Report create(@RequestBody Report obj) {
-        return service.create(obj);
+    @PostMapping("/save/{employeeId}")
+    public Report generateEmployeeReport(@PathVariable Long employeeId) {
+        return service.generateEmployeeReport(employeeId);
     }
 
     @GetMapping("/fetchAll")

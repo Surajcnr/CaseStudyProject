@@ -1,5 +1,6 @@
 package com.cts.demo.performancereviewservice.controller;
 
+import com.cts.demo.performancereviewservice.exceptions.PerformanceNotFound;
 import com.cts.demo.performancereviewservice.model.PerformanceReview;
 import com.cts.demo.performancereviewservice.service.PerformanceReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class PerformanceReviewController {
     PerformanceReviewService service;
 
     @PostMapping("/save")
-    public PerformanceReview create(@RequestBody PerformanceReview obj) {
+    public PerformanceReview create(@RequestBody PerformanceReview obj) throws PerformanceNotFound {
         return service.create(obj);
     }
 
@@ -24,9 +25,9 @@ public class PerformanceReviewController {
         return service.getAll();
     }
 
-    @GetMapping("/fetchById/{id}")
-    public PerformanceReview getById(@PathVariable Long id) {
-        return service.getById(id);
+    @GetMapping("/fetchById/{employeeId}")
+    public PerformanceReview getById(@PathVariable Long employeeId) {
+        return service.getById(employeeId);
     }
 
     @PutMapping("/update/{id}")

@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cts.demo.reportingservice.dto.FeedbackDTO;
 
-@FeignClient(name = "feedback-service")
+@FeignClient(name = "feedback-service",url="http://localhost:8083/feedbacks")
 public interface FeedbackClient {
-    @GetMapping("/api/feedbacks/employee/{employeeId}")
-    List<FeedbackDTO> getFeedbackByEmployeeId(@PathVariable("employeeId") Long employeeId);
+    @GetMapping("/fetchById/{toEmployeeId}")
+    List<FeedbackDTO> getFeedbackByEmployeeId(@PathVariable("toEmployeeId") Long id);
 }
 
 

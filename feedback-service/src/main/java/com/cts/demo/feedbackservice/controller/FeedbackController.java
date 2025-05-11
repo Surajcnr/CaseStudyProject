@@ -24,9 +24,9 @@ public class FeedbackController {
         return service.getAll();
     }
 
-    @GetMapping("/fetchById/{id}")
-    public Feedback getById(@PathVariable Long id) {
-        return service.getById(id);
+    @GetMapping("/fetchById/{toEmployeeId}")
+    public Feedback getById(@PathVariable Long toEmployeeId) {
+        return service.getById(toEmployeeId);
     }
 
     @PutMapping("/update/{id}")

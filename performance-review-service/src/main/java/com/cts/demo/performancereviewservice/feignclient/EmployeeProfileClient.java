@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cts.demo.performancereviewservice.dto.EmployeeProfileDTO;
 
-@FeignClient(name = "employee-profile-service")
+@FeignClient(name = "EMPLOYEE-PROFILE-SERVICE",path="/employeeprofiles")
 public interface EmployeeProfileClient {
-    @GetMapping("/employeeprofiles/{id}")
-    EmployeeProfileDTO getEmployeeById(@PathVariable("id") Long id);
+    @GetMapping("/fetchById/{id}")
+    EmployeeProfileDTO getById(@PathVariable("id") Long id);
 }
