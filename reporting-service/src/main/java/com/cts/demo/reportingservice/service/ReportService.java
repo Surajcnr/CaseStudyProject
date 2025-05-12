@@ -4,7 +4,7 @@ import com.cts.demo.reportingservice.model.Report;
 import java.util.List;
 
 public interface ReportService {
-	Report generateEmployeeReport(Long employeeId); // Uses Feign to call Feedback & Review services
+	Report create(Report obj); 
     List<Report> getAll();
     Report getById(Long id);
     Report update(Long id, Report obj);

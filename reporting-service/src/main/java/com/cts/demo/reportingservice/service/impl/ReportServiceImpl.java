@@ -6,10 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cts.demo.reportingservice.dto.FeedbackDTO;
-import com.cts.demo.reportingservice.dto.PerformanceReviewDTO;
-import com.cts.demo.reportingservice.feignclient.FeedbackClient;
-import com.cts.demo.reportingservice.feignclient.PerformanceReviewClient;
 import com.cts.demo.reportingservice.model.Report;
 import com.cts.demo.reportingservice.repository.ReportRepository;
 import com.cts.demo.reportingservice.service.ReportService;
@@ -19,26 +15,11 @@ public class ReportServiceImpl implements ReportService {
 
 	@Autowired
 	private ReportRepository repository;
-	
-	@Autowired
-	private FeedbackClient feedbackClient;
-
-	@Autowired
-	private PerformanceReviewClient performanceReviewClient;
 
 	@Override
-	public Report generateEmployeeReport(Long employeeId) {
-		List<FeedbackDTO> feedbacks = feedbackClient.getFeedbackByEmployeeId(employeeId);
-		List<PerformanceReviewDTO> reviews = performanceReviewClient.getReviewsByEmployeeId(employeeId);
+	public Report create(Report obj) {
 
-		// logic to create Report entity using feedbacks and reviews
-		Report report = new Report();
-		report.setEmployeeId(employeeId);
-		report.setReportDate(LocalDate.now());
-		report.setFeedbackSummary("Feedback count: " + feedbacks.size());
-		report.setPerformanceSummary("Reviews count: " + reviews.size());
-
-		return repository.save(report);
+		return repository.save(obj);
 	}
 
 	@Override

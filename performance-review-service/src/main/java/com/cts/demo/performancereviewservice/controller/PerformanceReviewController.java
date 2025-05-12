@@ -25,9 +25,9 @@ public class PerformanceReviewController {
         return service.getAll();
     }
 
-    @GetMapping("/fetchById/{employeeId}")
-    public PerformanceReview getById(@PathVariable Long employeeId) {
-        return service.getById(employeeId);
+    @GetMapping("/fetchById/{id}")
+    public PerformanceReview getById(@PathVariable Long id) {
+        return service.getById(id);
     }
 
     @PutMapping("/update/{id}")
