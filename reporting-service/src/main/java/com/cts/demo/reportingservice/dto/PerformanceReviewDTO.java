@@ -1,7 +1,5 @@
 package com.cts.demo.reportingservice.dto;
 
-import java.time.LocalDate;
-
 public class PerformanceReviewDTO {
 	
     private Double performanceScore;
