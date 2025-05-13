@@ -38,4 +38,8 @@ public class FeedbackController {
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }
+    @DeleteMapping("/deleteFeedbacksByEmployeeId/{employeeId}")
+    public void deleteFeedbacksByEmployeeId(@PathVariable Long employeeId) {
+        service.deleteFeedbacksByEmployeeId(employeeId);
+    }
 }

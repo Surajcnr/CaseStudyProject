@@ -1,21 +1,32 @@
 package com.cts.demo.feedbackservice.service.impl;
 
-import com.cts.demo.feedbackservice.model.Feedback;
-import com.cts.demo.feedbackservice.repository.FeedbackRepository;
-import com.cts.demo.feedbackservice.service.FeedbackService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.cts.demo.feedbackservice.feignclient.EmployeeProfileClient;
+import com.cts.demo.feedbackservice.model.Feedback;
+import com.cts.demo.feedbackservice.repository.FeedbackRepository;
+import com.cts.demo.feedbackservice.service.FeedbackService;
 
 @Service
 public class FeedbackServiceImpl implements FeedbackService {
 
     @Autowired
     private FeedbackRepository repository;
+    
+    @Autowired
+    private EmployeeProfileClient employeeProfileClient; 
 
     @Override
     public Feedback create(Feedback obj) {
+        if (employeeProfileClient.getEmployeeById(obj.getFromEmployeeId()) == null) {
+            throw new RuntimeException("From employee with ID " + obj.getFromEmployeeId() + " not found");
+        }
+        if (employeeProfileClient.getEmployeeById(obj.getToEmployeeId()) == null) {
+            throw new RuntimeException("To employee with ID " + obj.getToEmployeeId() + " not found");
+        }
         return repository.save(obj);
     }
 
@@ -32,6 +43,13 @@ public class FeedbackServiceImpl implements FeedbackService {
     @Override
     public Feedback update(Long id, Feedback obj) {
         if (!repository.existsById(id)) return null;
+
+        if (employeeProfileClient.getEmployeeById(obj.getFromEmployeeId()) == null) {
+            throw new RuntimeException("From employee with ID " + obj.getFromEmployeeId() + " not found");
+        }
+        if (employeeProfileClient.getEmployeeById(obj.getToEmployeeId()) == null) {
+            throw new RuntimeException("To employee with ID " + obj.getToEmployeeId() + " not found");
+        }
         obj.setFeedbackId(id);
         return repository.save(obj);
     }
@@ -39,5 +57,9 @@ public class FeedbackServiceImpl implements FeedbackService {
     @Override
     public void delete(Long id) {
         repository.deleteById(id);
+    }
+    @Override
+    public void deleteFeedbacksByEmployeeId(Long employeeId) {
+        repository.deleteByFromEmployeeIdOrToEmployeeId(employeeId, employeeId);
     }
 }

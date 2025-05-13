@@ -52,4 +52,8 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
+	@Override
+    public void deleteReviewsByEmployeeId(Long employeeId) {
+        repository.deleteByEmployeeId(employeeId);
+    }
 }

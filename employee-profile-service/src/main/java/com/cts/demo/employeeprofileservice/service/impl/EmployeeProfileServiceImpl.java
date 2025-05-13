@@ -1,18 +1,27 @@
 package com.cts.demo.employeeprofileservice.service.impl;
 
-import com.cts.demo.employeeprofileservice.model.EmployeeProfile;
-import com.cts.demo.employeeprofileservice.repository.EmployeeProfileRepository;
-import com.cts.demo.employeeprofileservice.service.EmployeeProfileService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.cts.demo.employeeprofileservice.feignclient.FeedbackClient;
+import com.cts.demo.employeeprofileservice.feignclient.PerformanceReviewClient;
+import com.cts.demo.employeeprofileservice.model.EmployeeProfile;
+import com.cts.demo.employeeprofileservice.repository.EmployeeProfileRepository;
+import com.cts.demo.employeeprofileservice.service.EmployeeProfileService;
 
 @Service
 public class EmployeeProfileServiceImpl implements EmployeeProfileService {
 
     @Autowired
     private EmployeeProfileRepository repository;
+    
+    @Autowired
+    private PerformanceReviewClient performanceReviewClient;
+    
+    @Autowired
+    private FeedbackClient feedbackClient;
 
     @Override
     public EmployeeProfile create(EmployeeProfile obj) {
@@ -40,5 +49,7 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
     @Override
     public void delete(Long id) {
         repository.deleteById(id);
+        performanceReviewClient.deleteReviewsByEmployeeId(id);
+        feedbackClient.deleteFeedbacksByEmployeeId(id);
     }
 }
