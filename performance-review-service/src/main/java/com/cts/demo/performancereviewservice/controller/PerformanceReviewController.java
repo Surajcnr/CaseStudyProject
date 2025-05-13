@@ -51,4 +51,9 @@ public class PerformanceReviewController {
     public void deleteReviewsByEmployeeId(@PathVariable Long employeeId) {
         service.deleteReviewsByEmployeeId(employeeId);
     }
+    @GetMapping("/fetchReviewsByEmployeeId/{employeeId}")
+    public List<PerformanceReview> getReviewsByEmployeeId(@PathVariable Long employeeId) {
+        return service.getReviewsByEmployeeId(employeeId);
+    }
+
 }

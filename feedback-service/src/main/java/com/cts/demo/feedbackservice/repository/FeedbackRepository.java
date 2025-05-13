@@ -1,5 +1,7 @@
 package com.cts.demo.feedbackservice.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
@@ -13,4 +15,6 @@ public interface FeedbackRepository extends JpaRepository<Feedback, Long> {
 	@Transactional
     @Modifying
 	void deleteByFromEmployeeIdOrToEmployeeId(Long fromEmployeeId, Long toEmployeeId);
+	List<Feedback> findByToEmployeeId(Long employeeId);
+
 }

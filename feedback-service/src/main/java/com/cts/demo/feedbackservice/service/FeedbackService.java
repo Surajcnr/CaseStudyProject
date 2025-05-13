@@ -10,4 +10,6 @@ public interface FeedbackService {
     Feedback update(Long id, Feedback obj);
     void delete(Long id);
 	void deleteFeedbacksByEmployeeId(Long employeeId);
+	List<Feedback> getFeedbacksByEmployeeId(Long employeeId);
+
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cts.demo.feedbackservice.feignclient.EmployeeProfileClient;
+import com.cts.demo.feedbackservice.feignclient.ReportClient;
 import com.cts.demo.feedbackservice.model.Feedback;
 import com.cts.demo.feedbackservice.repository.FeedbackRepository;
 import com.cts.demo.feedbackservice.service.FeedbackService;
@@ -18,6 +19,10 @@ public class FeedbackServiceImpl implements FeedbackService {
     
     @Autowired
     private EmployeeProfileClient employeeProfileClient; 
+
+    @Autowired
+    private ReportClient reportClient;
+
 
     @Override
     public Feedback create(Feedback obj) {
@@ -61,5 +66,12 @@ public class FeedbackServiceImpl implements FeedbackService {
     @Override
     public void deleteFeedbacksByEmployeeId(Long employeeId) {
         repository.deleteByFromEmployeeIdOrToEmployeeId(employeeId, employeeId);
+        reportClient.deleteReportsByEmployeeId(employeeId);
     }
+    @Override
+    public List<Feedback> getFeedbacksByEmployeeId(Long employeeId) {
+        return repository.findByToEmployeeId(employeeId);
+    }
+    
+
 }

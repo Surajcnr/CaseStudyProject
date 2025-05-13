@@ -42,4 +42,10 @@ public class FeedbackController {
     public void deleteFeedbacksByEmployeeId(@PathVariable Long employeeId) {
         service.deleteFeedbacksByEmployeeId(employeeId);
     }
+    
+    @GetMapping("/fetchFeedbacksByEmployeeId/{employeeId}")
+    public List<Feedback> getFeedbacksByEmployeeId(@PathVariable Long employeeId) {
+        return service.getFeedbacksByEmployeeId(employeeId);
+    }
+
 }

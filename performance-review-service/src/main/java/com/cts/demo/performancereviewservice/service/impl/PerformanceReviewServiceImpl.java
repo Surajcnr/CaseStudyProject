@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.cts.demo.performancereviewservice.dto.EmployeeProfileDTO;
 import com.cts.demo.performancereviewservice.exceptions.PerformanceNotFound;
 import com.cts.demo.performancereviewservice.feignclient.EmployeeProfileClient;
+import com.cts.demo.performancereviewservice.feignclient.ReportClient;
 import com.cts.demo.performancereviewservice.model.PerformanceReview;
 import com.cts.demo.performancereviewservice.repository.PerformanceReviewRepository;
 import com.cts.demo.performancereviewservice.service.PerformanceReviewService;
@@ -21,6 +22,9 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
 	@Autowired
 	private EmployeeProfileClient employeeProfileClient;
 
+	@Autowired
+	private ReportClient reportClient;
+	
 	@Override
 	public PerformanceReview create(PerformanceReview obj) throws PerformanceNotFound {
 		EmployeeProfileDTO employee = employeeProfileClient.getById(obj.getEmployeeId());
@@ -55,5 +59,11 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
 	@Override
     public void deleteReviewsByEmployeeId(Long employeeId) {
         repository.deleteByEmployeeId(employeeId);
+        reportClient.deleteReportsByEmployeeId(employeeId);
     }
+	@Override
+	public List<PerformanceReview> getReviewsByEmployeeId(Long employeeId) {
+	    return repository.findByEmployeeId(employeeId);
+	}
+
 }

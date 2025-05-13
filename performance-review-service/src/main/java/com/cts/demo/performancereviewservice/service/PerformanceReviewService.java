@@ -11,4 +11,6 @@ public interface PerformanceReviewService {
     PerformanceReview update(Long id, PerformanceReview obj);
     void delete(Long id);
     void deleteReviewsByEmployeeId(Long employeeId);
+    List<PerformanceReview> getReviewsByEmployeeId(Long employeeId);
+
 }

@@ -9,4 +9,5 @@ public interface ReportService {
     Report getById(Long id);
     Report update(Long id, Report obj);
     void delete(Long id);
+    void deleteByEmployeeId(Long employeeId);
 }

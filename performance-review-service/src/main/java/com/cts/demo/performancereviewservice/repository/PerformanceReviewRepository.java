@@ -1,5 +1,7 @@
 package com.cts.demo.performancereviewservice.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
@@ -13,4 +15,6 @@ public interface PerformanceReviewRepository extends JpaRepository<PerformanceRe
 	@Transactional
     @Modifying
     void deleteByEmployeeId(Long employeeId);
+	List<PerformanceReview> findByEmployeeId(Long employeeId);
+
 }
