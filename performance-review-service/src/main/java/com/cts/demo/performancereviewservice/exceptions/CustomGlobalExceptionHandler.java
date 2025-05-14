@@ -26,7 +26,7 @@ public class CustomGlobalExceptionHandler {
 		ex.getBindingResult().getAllErrors().forEach(error -> {
 				body.put(((FieldError)error).getField(),error.getDefaultMessage());
 			});
-		return new ResponseEntity<Object>(body, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
 
 	}
 
