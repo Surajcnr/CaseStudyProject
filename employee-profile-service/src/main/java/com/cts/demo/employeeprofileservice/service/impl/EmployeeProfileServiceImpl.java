@@ -27,6 +27,13 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
     @Autowired
     private FeedbackClient feedbackClient;
 
+    /**
+     * Creates a new EmployeeProfile and saves it in the repository.
+     * Logs the creation process and returns the created EmployeeProfile.
+     *
+     * @param obj the EmployeeProfile object to create.
+     * @return the created EmployeeProfile with its assigned id.
+     */
     @Override
     public EmployeeProfile create(EmployeeProfile obj) {
         logger.info("Creating EmployeeProfile: {}", obj);
@@ -35,6 +42,12 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
         return createdProfile;
     }
 
+    /**
+     * Retrieves all EmployeeProfiles from the repository.
+     * Logs the number of profiles fetched.
+     *
+     * @return a list of all EmployeeProfiles.
+     */
     @Override
     public List<EmployeeProfile> getAll() {
         logger.info("Fetching all EmployeeProfiles");
@@ -43,6 +56,13 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
         return profiles;
     }
 
+    /**
+     * Fetches an EmployeeProfile by its id from the repository.
+     * Logs a warning if the profile is not found.
+     *
+     * @param id the id of the EmployeeProfile to retrieve.
+     * @return the EmployeeProfile if found, otherwise null.
+     */
     @Override
     public EmployeeProfile getById(Long id) {
         logger.info("Fetching EmployeeProfile with id: {}", id);
@@ -55,6 +75,14 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
         return profile;
     }
 
+    /**
+     * Updates an existing EmployeeProfile with new data.
+     * First verifies if the profile exists; if not, logs a warning and returns null.
+     *
+     * @param id  the id of the EmployeeProfile to update.
+     * @param obj the EmployeeProfile object containing updated data.
+     * @return the updated EmployeeProfile object, or null if update failed.
+     */
     @Override
     public EmployeeProfile update(Long id, EmployeeProfile obj) {
         logger.info("Attempting to update EmployeeProfile with id: {}", id);
@@ -68,6 +96,12 @@ public class EmployeeProfileServiceImpl implements EmployeeProfileService {
         return updatedProfile;
     }
 
+    /**
+     * Deletes an EmployeeProfile by its id.
+     * Also triggers deletion of associated performance reviews and feedbacks via Feign clients.
+     *
+     * @param id the id of the EmployeeProfile to delete.
+     */
     @Override
     public void delete(Long id) {
         logger.info("Deleting EmployeeProfile with id: {}", id);

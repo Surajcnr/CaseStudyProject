@@ -1,5 +1,12 @@
 package com.cts.demo.performancereviewservice.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class EmployeeProfileDTO {
     private Long employeeId;
     private String name;

@@ -29,6 +29,18 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
     @Autowired
     private ReportClient reportClient;
     
+    /**
+     * Creates a new PerformanceReview record.
+     * <p>
+     * This method verifies that an EmployeeProfile exists for the given employeeId using the EmployeeProfileClient.
+     * If the employee does not exist, a PerformanceNotFound exception is thrown.
+     * Otherwise, the performance review is saved and returned.
+     * </p>
+     *
+     * @param obj the PerformanceReview object to be created.
+     * @return the created PerformanceReview object with its generated reviewId.
+     * @throws PerformanceNotFound if the employee associated with the review is not found.
+     */
     @Override
     public PerformanceReview create(PerformanceReview obj) throws PerformanceNotFound {
         logger.info("Attempting to create PerformanceReview for employeeId: {}", obj.getEmployeeId());
@@ -42,6 +54,11 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         return created;
     }
 
+    /**
+     * Retrieves all PerformanceReview records from the repository.
+     *
+     * @return a List of all PerformanceReview objects.
+     */
     @Override
     public List<PerformanceReview> getAll() {
         logger.info("Fetching all PerformanceReviews");
@@ -50,6 +67,12 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         return reviews;
     }
 
+    /**
+     * Retrieves a PerformanceReview record by its reviewId.
+     *
+     * @param id the ID of the PerformanceReview to retrieve.
+     * @return the PerformanceReview object if found; otherwise, returns null.
+     */
     @Override
     public PerformanceReview getById(Long id) {
         logger.info("Fetching PerformanceReview with id: {}", id);
@@ -62,6 +85,17 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         return review;
     }
 
+    /**
+     * Updates an existing PerformanceReview record.
+     * <p>
+     * Verifies that a review with the given id exists. If it does,
+     * sets the reviewId on the provided PerformanceReview object and saves the update.
+     * </p>
+     *
+     * @param id  the ID of the PerformanceReview to update.
+     * @param obj the PerformanceReview object containing updated data.
+     * @return the updated PerformanceReview object, or null if the review does not exist.
+     */
     @Override
     public PerformanceReview update(Long id, PerformanceReview obj) {
         logger.info("Attempting to update PerformanceReview with id: {}", id);
@@ -75,6 +109,11 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         return updated;
     }
 
+    /**
+     * Deletes a PerformanceReview record by its reviewId.
+     *
+     * @param id the ID of the PerformanceReview to delete.
+     */
     @Override
     public void delete(Long id) {
         logger.info("Deleting PerformanceReview with id: {}", id);
@@ -82,6 +121,15 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         logger.info("Deleted PerformanceReview with id: {}", id);
     }
 
+    /**
+     * Deletes all PerformanceReview records for a specific employee.
+     * <p>
+     * This method deletes reviews by employeeId from the repository and then requests
+     * the deletion of related reports via the ReportClient.
+     * </p>
+     *
+     * @param employeeId the employeeId for which reviews should be deleted.
+     */
     @Override
     public void deleteReviewsByEmployeeId(Long employeeId) {
         logger.info("Deleting all PerformanceReviews for employeeId: {}", employeeId);
@@ -91,6 +139,12 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
         logger.info("Requested deletion of reports for employeeId: {}", employeeId);
     }
 
+    /**
+     * Retrieves all PerformanceReview records associated with a specific employee.
+     *
+     * @param employeeId the employeeId whose reviews are to be fetched.
+     * @return a List of PerformanceReview objects for the given employeeId.
+     */
     @Override
     public List<PerformanceReview> getReviewsByEmployeeId(Long employeeId) {
         logger.info("Fetching PerformanceReviews for employee with id: {}", employeeId);
