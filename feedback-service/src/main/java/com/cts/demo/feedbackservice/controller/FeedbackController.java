@@ -16,7 +16,7 @@ public class FeedbackController {
     FeedbackService service;
 
     @PostMapping("/save")
-    public Feedback create(@RequestBody Feedback obj) {
+    public Feedback create(@RequestBody @Validated Feedback obj) {
         return service.create(obj);
     }
 

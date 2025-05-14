@@ -3,6 +3,7 @@ package com.cts.demo.employeeprofileservice.controller;
 import com.cts.demo.employeeprofileservice.model.EmployeeProfile;
 import com.cts.demo.employeeprofileservice.service.EmployeeProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class EmployeeProfileController {
     EmployeeProfileService service;
 
     @PostMapping("/save")
-    public EmployeeProfile create(@RequestBody EmployeeProfile obj) {
+    public EmployeeProfile create(@RequestBody @Validated EmployeeProfile obj) {
         return service.create(obj);
     }
 

@@ -3,6 +3,7 @@ package com.cts.demo.performancereviewservice.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ public class PerformanceReviewController {
     PerformanceReviewService service;
 
     @PostMapping("/save")
-    public PerformanceReview create(@RequestBody PerformanceReview obj) throws PerformanceNotFound {
+    public PerformanceReview create(@RequestBody @Validated PerformanceReview obj) throws PerformanceNotFound {
         return service.create(obj);
     }
 
