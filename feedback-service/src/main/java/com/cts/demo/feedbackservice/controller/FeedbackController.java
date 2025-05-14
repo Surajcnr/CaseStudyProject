@@ -3,6 +3,7 @@ package com.cts.demo.feedbackservice.controller;
 import com.cts.demo.feedbackservice.model.Feedback;
 import com.cts.demo.feedbackservice.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
