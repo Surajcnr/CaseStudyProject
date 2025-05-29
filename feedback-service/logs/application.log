@@ -1,0 +1,123 @@
+2025-05-29T09:36:13.658+05:30  INFO 22472 --- [feedback-service] [restartedMain] c.c.d.f.FeedbackServiceApplication       : Starting FeedbackServiceApplication using Java 21.0.6 with PID 22472 (C:\Users\2400970\git\EmployeePerformanceAndFeedbackManagementSystem\feedback-service\target\classes started by 2400970 in C:\Users\2400970\git\EmployeePerformanceAndFeedbackManagementSystem\feedback-service)
+2025-05-29T09:36:13.682+05:30  INFO 22472 --- [feedback-service] [restartedMain] c.c.d.f.FeedbackServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-05-29T09:36:14.019+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-29T09:36:14.038+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=feedback-service, profiles=[default], label=null, version=ae09da6f6f4a2a9a28dbec542144e8bfca659e3a, state=
+2025-05-29T09:36:14.047+05:30  INFO 22472 --- [feedback-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-29T09:36:14.050+05:30  INFO 22472 --- [feedback-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-29T09:36:16.307+05:30  INFO 22472 --- [feedback-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T09:36:16.575+05:30  INFO 22472 --- [feedback-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 244 ms. Found 1 JPA repository interface.
+2025-05-29T09:36:16.895+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7799ed5-36b0-3dff-bfe8-9029800b5b73
+2025-05-29T09:36:18.040+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-05-29T09:36:18.062+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-29T09:36:18.062+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-29T09:36:18.155+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-29T09:36:18.156+05:30  INFO 22472 --- [feedback-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4102 ms
+2025-05-29T09:36:18.750+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T09:36:18.821+05:30  INFO 22472 --- [feedback-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-29T09:36:18.890+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T09:36:19.259+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T09:36:19.309+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T09:36:19.788+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13b39895
+2025-05-29T09:36:19.790+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T09:36:19.961+05:30  WARN 22472 --- [feedback-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29T09:36:20.013+05:30  INFO 22472 --- [feedback-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T09:36:21.667+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29T09:36:21.795+05:30  INFO 22472 --- [feedback-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T09:36:22.532+05:30  WARN 22472 --- [feedback-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T09:36:22.653+05:30  WARN 22472 --- [feedback-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-29T09:36:22.743+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EMPLOYEE-PROFILE-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-29T09:36:22.886+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'REPORTING-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-29T09:36:24.122+05:30  INFO 22472 --- [feedback-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-29T09:36:24.192+05:30  WARN 22472 --- [feedback-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-29T09:36:24.222+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
+2025-05-29T09:36:24.355+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-29T09:36:24.387+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-29T09:36:24.392+05:30  INFO 22472 --- [feedback-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:36:24.403+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-29T09:36:24.404+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-29T09:36:24.404+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-29T09:36:24.405+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-29T09:36:24.405+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-29T09:36:24.405+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-29T09:36:24.405+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-29T09:36:25.094+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-29T09:36:25.096+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-29T09:36:25.099+05:30  INFO 22472 --- [feedback-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-29T09:36:25.101+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748491585101 with initial instances count: 0
+2025-05-29T09:36:25.117+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACK-SERVICE with eureka with status UP
+2025-05-29T09:36:25.118+05:30  INFO 22472 --- [feedback-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748491585118, current=UP, previous=STARTING]
+2025-05-29T09:36:25.121+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACK-SERVICE/LTIN603893.cts.com:feedback-service:8083: registering service...
+2025-05-29T09:36:25.145+05:30  INFO 22472 --- [feedback-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-05-29T09:36:25.147+05:30  INFO 22472 --- [feedback-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2025-05-29T09:36:25.169+05:30  INFO 22472 --- [feedback-service] [restartedMain] c.c.d.f.FeedbackServiceApplication       : Started FeedbackServiceApplication in 15.153 seconds (process running for 17.812)
+2025-05-29T09:36:25.315+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACK-SERVICE/LTIN603893.cts.com:feedback-service:8083 - registration status: 204
+2025-05-29T09:36:25.639+05:30  INFO 22472 --- [feedback-service] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-29T09:36:25.640+05:30  INFO 22472 --- [feedback-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-29T09:36:25.642+05:30  INFO 22472 --- [feedback-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-29T09:36:55.110+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-29T09:36:55.111+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-29T09:36:55.134+05:30  INFO 22472 --- [feedback-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-29T09:41:24.411+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:46:24.421+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:51:24.424+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:56:24.427+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:01:24.433+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:06:24.441+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:11:24.458+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:16:24.463+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:21:24.478+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:26:24.486+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:31:24.493+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:36:24.506+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:41:24.516+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:06:03.933+05:30  WARN 22472 --- [feedback-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m13s94ms868µs).
+2025-05-29T11:07:07.597+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:12:07.610+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:17:07.619+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:22:07.633+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:27:07.641+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:32:07.654+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:37:07.669+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:42:07.678+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:47:07.691+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:52:07.703+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:57:07.719+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:02:07.733+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:07:07.737+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:12:07.747+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:17:07.752+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:22:07.768+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:27:07.774+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:32:07.776+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:37:07.778+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:42:07.791+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:47:07.798+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:52:07.811+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:57:07.814+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:02:07.826+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:07:07.838+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:12:07.840+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:17:07.852+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:22:07.866+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:27:07.878+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:32:07.886+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:05:53.896+05:30  WARN 22472 --- [feedback-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m17s634ms780µs700ns).
+2025-05-29T14:08:16.001+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:13:16.005+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:18:16.021+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:23:16.030+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:28:16.034+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:33:16.035+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:38:16.040+05:30  INFO 22472 --- [feedback-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

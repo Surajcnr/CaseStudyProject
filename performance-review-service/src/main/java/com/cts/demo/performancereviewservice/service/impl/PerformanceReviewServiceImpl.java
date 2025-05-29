@@ -72,13 +72,15 @@ public class PerformanceReviewServiceImpl implements PerformanceReviewService {
      *
      * @param id the ID of the PerformanceReview to retrieve.
      * @return the PerformanceReview object if found; otherwise, returns null.
+     * @throws PerformanceNotFound 
      */
     @Override
-    public PerformanceReview getById(Long id) {
+    public PerformanceReview getById(Long id) throws PerformanceNotFound {
         logger.info("Fetching PerformanceReview with id: {}", id);
         PerformanceReview review = repository.findById(id).orElse(null);
         if (review == null) {
             logger.warn("PerformanceReview with id {} not found", id);
+            throw new PerformanceNotFound("performance review not found");
         } else {
             logger.info("Found PerformanceReview: {}", review);
         }

@@ -35,7 +35,7 @@ public class PerformanceReviewController {
     }
 
     @GetMapping("/fetchById/{id}")
-    public PerformanceReview getById(@PathVariable Long id) {
+    public PerformanceReview getById(@PathVariable Long id) throws PerformanceNotFound{
         return service.getById(id);
     }
 

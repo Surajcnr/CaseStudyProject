@@ -1,0 +1,114 @@
+2025-05-29T09:37:00.220+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .c.d.e.EmployeeProfileServiceApplication : Starting EmployeeProfileServiceApplication using Java 21.0.6 with PID 22028 (C:\Users\2400970\git\EmployeePerformanceAndFeedbackManagementSystem\employee-profile-service\target\classes started by 2400970 in C:\Users\2400970\git\EmployeePerformanceAndFeedbackManagementSystem\employee-profile-service)
+2025-05-29T09:37:00.226+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .c.d.e.EmployeeProfileServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-05-29T09:37:00.271+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-29T09:37:00.271+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=employee-profile-service, profiles=[default], label=null, version=ae09da6f6f4a2a9a28dbec542144e8bfca659e3a, state=
+2025-05-29T09:37:00.273+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-29T09:37:00.273+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-29T09:37:00.995+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T09:37:01.098+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2025-05-29T09:37:01.233+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4f75220e-8ef8-355b-aa7f-c45e100b6f0a
+2025-05-29T09:37:01.713+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-29T09:37:01.722+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-29T09:37:01.723+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-29T09:37:01.763+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-29T09:37:01.763+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1490 ms
+2025-05-29T09:37:02.062+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T09:37:02.105+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-29T09:37:02.128+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T09:37:02.311+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T09:37:02.333+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T09:37:02.576+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38892fc9
+2025-05-29T09:37:02.578+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T09:37:02.626+05:30  WARN 22028 --- [employee-profile-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29T09:37:02.638+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T09:37:03.252+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29T09:37:03.369+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T09:37:03.620+05:30  WARN 22028 --- [employee-profile-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T09:37:03.672+05:30  WARN 22028 --- [employee-profile-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-29T09:37:03.708+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'PERFORMANCE-REVIEW-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-29T09:37:03.753+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'FEEDBACK-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-29T09:37:04.424+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-29T09:37:04.454+05:30  WARN 22028 --- [employee-profile-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-29T09:37:04.468+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
+2025-05-29T09:37:04.545+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-29T09:37:04.565+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-29T09:37:04.568+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:37:04.576+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-29T09:37:04.576+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-29T09:37:04.576+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-29T09:37:04.576+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-29T09:37:04.577+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-29T09:37:04.577+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-29T09:37:04.577+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-29T09:37:04.768+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-29T09:37:04.770+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-29T09:37:04.771+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-29T09:37:04.772+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748491624772 with initial instances count: 3
+2025-05-29T09:37:04.777+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-PROFILE-SERVICE with eureka with status UP
+2025-05-29T09:37:04.777+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748491624777, current=UP, previous=STARTING]
+2025-05-29T09:37:04.779+05:30  INFO 22028 --- [employee-profile-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-PROFILE-SERVICE/LTIN603893.cts.com:employee-profile-service:8081: registering service...
+2025-05-29T09:37:04.812+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-29T09:37:04.813+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-05-29T09:37:04.836+05:30  INFO 22028 --- [employee-profile-service] [restartedMain] .c.d.e.EmployeeProfileServiceApplication : Started EmployeeProfileServiceApplication in 5.906 seconds (process running for 6.544)
+2025-05-29T09:37:04.845+05:30  INFO 22028 --- [employee-profile-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-PROFILE-SERVICE/LTIN603893.cts.com:employee-profile-service:8081 - registration status: 204
+2025-05-29T09:37:05.027+05:30  INFO 22028 --- [employee-profile-service] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-29T09:37:05.027+05:30  INFO 22028 --- [employee-profile-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-29T09:37:05.029+05:30  INFO 22028 --- [employee-profile-service] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-29T09:42:04.585+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:47:04.599+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:52:04.613+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T09:57:04.634+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:02:04.638+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:07:04.654+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:12:04.671+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:17:04.680+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:22:04.692+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:27:04.700+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:32:04.712+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:37:04.727+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T10:42:04.729+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:06:16.764+05:30  WARN 22028 --- [employee-profile-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m13s82ms763µs900ns).
+2025-05-29T11:07:47.814+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:12:47.827+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:17:47.832+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:22:47.836+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:27:47.842+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:32:47.846+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:37:47.855+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:42:47.859+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:47:47.863+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:52:47.867+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T11:57:47.869+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:02:47.878+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:07:47.881+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:12:47.889+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:17:47.890+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:22:47.905+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:27:47.906+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:32:47.916+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:37:47.928+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:42:47.930+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:47:47.942+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:52:47.955+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T12:57:47.962+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:02:47.969+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:07:47.977+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:12:47.979+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:17:47.988+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:22:48.002+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:27:48.011+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T13:32:48.021+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:05:51.298+05:30  WARN 22028 --- [employee-profile-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m32s230ms896µs900ns).
+2025-05-29T14:08:56.126+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:13:56.138+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:18:56.143+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:23:56.154+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:28:56.155+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-29T14:33:56.167+05:30  INFO 22028 --- [employee-profile-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

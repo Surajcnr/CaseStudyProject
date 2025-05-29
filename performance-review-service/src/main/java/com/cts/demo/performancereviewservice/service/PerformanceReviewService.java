@@ -7,7 +7,7 @@ import java.util.List;
 public interface PerformanceReviewService {
     PerformanceReview create(PerformanceReview obj) throws PerformanceNotFound;
     List<PerformanceReview> getAll();
-    PerformanceReview getById(Long id);
+    PerformanceReview getById(Long id) throws PerformanceNotFound;
     PerformanceReview update(Long id, PerformanceReview obj);
     void delete(Long id);
     void deleteReviewsByEmployeeId(Long employeeId);

@@ -79,7 +79,7 @@ class PerformanceReviewServiceImplTest {
     }
 
     @Test
-    void testGetById() {
+    void testGetById() throws PerformanceNotFound {
         when(repository.findById(1L)).thenReturn(Optional.of(review));
 
         PerformanceReview found = performanceReviewService.getById(1L);
