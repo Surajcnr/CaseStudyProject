@@ -59,7 +59,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     }
 
     private boolean isAuthorized(String role, String path, String method) {
-        if ("MANAGER".equalsIgnoreCase(role)) {
+        if ("ADMIN".equalsIgnoreCase(role)) {
             return path.startsWith("/employeeprofiles") 
             		|| path.startsWith("/feedbacks")
             		|| path.startsWith("/performancereviews")|| path.startsWith("/reports");
